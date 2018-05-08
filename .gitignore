@@ -1,0 +1,12 @@
+*
+!.gitignore
+!**/*.md
+!**/*.v
+!**/*.vh
+!**/*.xdc
+!**/*.hex
+!**/*.asm
+!test/
+!cpu-testcase/
+!gen.py
+!inc/
