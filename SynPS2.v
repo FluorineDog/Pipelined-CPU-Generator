@@ -25,7 +25,7 @@ module SynPS2(
             r_datamem <= 0;
             bht_state <= 0;
             is_branch <= 0;
-        end else if(clear) begin
+        end else if(!clear) begin
             rd <= 0;
             regfile_w_en <= 0;
             r_datamem <= 0;

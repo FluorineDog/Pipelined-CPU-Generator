@@ -14,7 +14,7 @@ CPU Pipeline Parts Verilog Code Auto Generator
 
 生成的流水线接口分为两部分。
 1. 流水线模块定义，也就是 SynPS1.v, SynPS2.v, SynPS3.v, SynPS4.v
-这四个文件，内容是带enable端(en_vpsX)、异步清零接口(clear_vpsX)的流水线模块。
+这四个文件，内容是带enable端(en_vpsX, 高电平有效)、同步清零接口(clear_vpsX, 低电平触发)的流水线模块。
 2. 流水线模块连接代码，也就是inc文件夹下的Laji_vPSx_inc.vh文件系列，
 在主模块直接`include即可使用
 

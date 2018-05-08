@@ -16,7 +16,7 @@ module SynPS1(
         if (!rst_n) begin 
             inst <= 0;
             bht_state <= 0;
-        end else if(clear) begin
+        end else if(!clear) begin
             inst <= 0;
             bht_state <= 0;
         end else if(en) begin

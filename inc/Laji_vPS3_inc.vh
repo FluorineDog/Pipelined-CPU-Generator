@@ -4,6 +4,8 @@
         .rst_n(rst_n),
         .en(en_vps3),
         .clear(clear_vps3),
+        .data_in(data_ps2),
+        .data(data_ps3),
         .rd_in(rd_ps2),
         .rd(rd_ps3),
         .regfile_w_en_in(regfile_w_en_ps2),

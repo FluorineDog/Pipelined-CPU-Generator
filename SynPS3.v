@@ -7,12 +7,14 @@ module SynPS3(
     input rst_n,
     input en,       
     input clear,
+    input data_in,
     input [4:0] rd_in,
     input regfile_w_en_in,
     input [4:0] regfile_req_w_in,
     input r_datamem_in,
     input [1:0] bht_state_in,
     input is_branch_in,
+    output reg data,
     output reg [4:0] rd,
     output reg regfile_w_en,
     output reg [4:0] regfile_req_w,
@@ -22,13 +24,15 @@ module SynPS3(
 );
     always @(posedge clk, negedge rst_n) begin
         if (!rst_n) begin 
+            data <= 0;
             rd <= 0;
             regfile_w_en <= 0;
             regfile_req_w <= 0;
             r_datamem <= 0;
             bht_state <= 0;
             is_branch <= 0;
-        end else if(clear) begin
+        end else if(!clear) begin
+            data <= 0;
             rd <= 0;
             regfile_w_en <= 0;
             regfile_req_w <= 0;
@@ -36,6 +40,7 @@ module SynPS3(
             bht_state <= 0;
             is_branch <= 0;
         end else if(en) begin
+            data <= data_in;
             rd <= rd_in;
             regfile_w_en <= regfile_w_en_in;
             regfile_req_w <= regfile_req_w_in;

@@ -2,7 +2,8 @@
 
 `define BIT_WIDTH
 // Brief: CPU Top Module, synchronized
-// Author: EAirPeter
+// Main-Author: EAirPeter
+// co-Author: Fluorine Dog, cuishaobo, AzureCrab, ghy
 module SynLajiIntelKnightsLanding(
     input clk, 
     input rst_n, 
@@ -15,43 +16,43 @@ module SynLajiIntelKnightsLanding(
 
     ////////////////////////////
     ///////   ps1 IF/ID  ////////
-    assign en_vps1 = 0;
-    assign clear_vps1 = 0;
+    assign en_vps1 = 1;
+    assign clear_vps1 = 1; 
     `include "inc/Laji_vPS1_inc.vh"
     ////////////////////////////
     
     // YOUR CODE FOR STAGE 1 HERE
-    // code to use xxxx_ps1
+    // code to use or generate xxxx_ps1
 
     /////////////////////////////
     ///////   ps2 ID/EX  ////////
-    assign en_vps2 = 0;
-    assign clear_vps2 = 0;
+    assign en_vps2 = 1;
+    assign clear_vps2 = 1;
     `include "inc/Laji_vPS2_inc.vh"
     /////////////////////////////
 
-    //YOUR CODE FOR STAGE 2 HERE
-    // code to use xxxx_ps2
+    // YOUR CODE FOR STAGE 2 HERE
+    // code to use or generate xxxx_ps2
 
     /////////////////////////////
-    ///////   ps3 EX/DM  ////////
-    assign en_vps3 = 0;
-    assign clear_vps3 = 0;
+    ///////   ps3 EX/MEM  ////////
+    assign en_vps3 = 1;
+    assign clear_vps3 = 1;
     `include "inc/Laji_vPS3_inc.vh"
     ////////////////////////////
 
     // YOUR CODE FOR STAGE 3 HERE   
-    // code to use xxxx_ps3
+    // code to use or generate xxxx_ps3
 
-    ///////////////////////
-    //////write back///////
-    assign en_vps4 = 0;
-    assign clear_vps4 = 0;
+    //////////////////////////////
+    //////   ps4 MEM/WB  /////////
+    assign en_vps4 = 1;
+    assign clear_vps4 = 1;
     `include "inc/Laji_vPS4_inc.vh"
-    //////////////////////
+    //////////////////////////////
 
     // YOUR CODE FOR STAGE 4 HERE
-    // code to use xxxx_ps4
+    // code to use or generate xxxx_ps4
 
 endmodule
 

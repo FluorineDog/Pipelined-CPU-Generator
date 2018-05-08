@@ -1,4 +1,5 @@
 #!/bin/python3
+# Authored by Fluorinedog
 import re
 pattern = re.compile(r"^(wire|reg) +(\[.*\])?(.*);")
 
@@ -17,7 +18,7 @@ module SynPS{0}(
     always @(posedge clk, negedge rst_n) begin
         if (!rst_n) begin 
 {2}
-        end else if(clear) begin
+        end else if(!clear) begin
 {2}
         end else if(en) begin
 {3}

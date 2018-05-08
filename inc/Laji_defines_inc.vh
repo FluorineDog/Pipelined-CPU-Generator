@@ -1,3 +1,5 @@
+wire data_ps2, data_ps3, data_ps4;
+// more real world example here
 wire [31:0] inst_ps0, inst_ps1;
 wire [5:0] opcode, funct;
 wire [4:0] rt;
