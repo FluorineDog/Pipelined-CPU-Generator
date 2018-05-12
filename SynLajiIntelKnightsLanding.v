@@ -1,6 +1,5 @@
 `timescale 1ns / 1ps
 
-`define BIT_WIDTH
 // Brief: CPU Top Module, synchronized
 // Main-Author: EAirPeter
 // co-Author: Fluorine Dog, cuishaobo, AzureCrab, ghy
